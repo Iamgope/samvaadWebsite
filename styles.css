@@ -512,27 +512,76 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 32px 30px;
-  max-width: 1400px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 24px 40px 32px;
+  border-top: 1px solid rgba(255,255,255,.09);
   font-size: 13px;
   color: var(--muted);
 }
-.foot__right {
-  text-decoration: none;
+.foot__brand { display: flex; flex-direction: column; gap: 2px; }
+.foot__name {
+  font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
   color: var(--ink);
-  font-weight: 500;
-  display: inline-flex;
+}
+.foot__tag { color: var(--muted); }
+.foot__links {
+  display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
 }
-.foot__right span {
-  background: var(--lav);
-  color: #0e0f13;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-weight: 600;
+.foot__links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease;
 }
+.foot__links a:hover { color: var(--ink); }
+
+/* ─── Legal pages ──────────────────────────────── */
+.legal {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+  flex: 1;
+}
+.legal__back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+.legal__back:hover { color: var(--ink); }
+.legal h1 {
+  font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.025em;
+}
+.legal .updated { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.legal h2 {
+  font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  margin-top: 36px;
+}
+.legal p, .legal li {
+  color: var(--muted);
+  line-height: 1.65;
+  margin-top: 12px;
+}
+.legal ul { padding-left: 20px; }
+.legal a { color: var(--lav); }
 
 /* ─── Responsive ───────────────────────────────── */
 @media (max-width: 720px) {
@@ -594,5 +643,7 @@ body {
   .steel-btn__text small { font-size: 9px; }
   .steel-btn__text strong { font-size: 15px; }
 
-  .foot { flex-direction: column; gap: 12px; text-align: center; padding: 16px 20px 24px; }
+  .foot { flex-direction: column; gap: 14px; text-align: center; padding: 20px 20px 26px; }
+  .foot__brand { align-items: center; }
+  .foot__links { flex-wrap: wrap; justify-content: center; gap: 18px; }
 }
