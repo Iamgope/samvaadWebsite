@@ -46,11 +46,30 @@ body {
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 22px 32px;
+  justify-content: space-between;
+  padding: 18px 32px;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+}
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  z-index: 1;
+}
+.nav__brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.nav__brand span {
+  font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
 }
 .logo {
   display: grid;
@@ -66,6 +85,10 @@ body {
   letter-spacing: -1px;
 }
 .nav__pills {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: 4px;
   background: rgba(255,255,255,.05);
@@ -523,12 +546,16 @@ body {
 }
 .foot__brand { display: flex; flex-direction: column; gap: 2px; }
 .foot__name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
+.foot__name img { height: 24px; width: auto; display: block; }
 .foot__tag { color: var(--muted); }
 .foot__links {
   display: flex;
@@ -585,11 +612,13 @@ body {
 
 /* ─── Responsive ───────────────────────────────── */
 @media (max-width: 720px) {
-  /* nav: just the Download button on the right */
-  .nav { padding: 16px 18px; justify-content: flex-end; }
+  /* nav: logo left, Download right */
+  .nav { padding: 16px 18px; justify-content: space-between; }
   .nav__pills { display: none; }
   .nav__hint { display: none; }
   .nav__cta { display: inline-flex; }
+  .nav__brand img { height: 34px; }
+  .nav__brand span { font-size: 18px; }
 
   /* stack: phone (with bubbles) up top, text + buttons below it */
   .hero {
