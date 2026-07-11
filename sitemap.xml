@@ -6,22 +6,22 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://joinduella.com/faqs.html</loc>
+    <loc>https://joinduella.com/faqs</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joinduella.com/blog.html</loc>
+    <loc>https://joinduella.com/blog</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://joinduella.com/terms.html</loc>
+    <loc>https://joinduella.com/terms</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://joinduella.com/privacy.html</loc>
+    <loc>https://joinduella.com/privacy</loc>
     <lastmod>2026-07-11</lastmod>
     <priority>0.3</priority>
   </url>
