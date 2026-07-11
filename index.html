@@ -5,6 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duella — Your ideas deserve more than a comment section</title>
+  <meta name="description"
+    content="Duella is a debate app where you pick a side on real topics and make your case against real people. Structured one on one debates, honest feedback, and a ranking that rewards good arguments. Coming soon to iOS and Android." />
+  <link rel="canonical" href="https://joinduella.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Duella" />
+  <meta property="og:title" content="Duella — Your ideas deserve more than a comment section" />
+  <meta property="og:description"
+    content="Pick a side, make your case, and climb the ranks in structured one on one debates. Coming soon to iOS and Android." />
+  <meta property="og:url" content="https://joinduella.com/" />
+  <meta property="og:image" content="https://joinduella.com/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Duella — Your ideas deserve more than a comment section" />
+  <meta name="twitter:description"
+    content="Pick a side, make your case, and climb the ranks in structured one on one debates." />
+  <meta name="twitter:image" content="https://joinduella.com/og-image.png" />
 
   <!-- Favicons / app icons -->
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
@@ -23,6 +42,27 @@
     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Duella",
+    "url": "https://joinduella.com/",
+    "logo": "https://joinduella.com/android-chrome-512x512.png",
+    "email": "support@joinduella.com",
+    "description": "A debate app where you pick a side on real topics and make your case against real people."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Duella",
+    "url": "https://joinduella.com/"
+  }
+  </script>
 </head>
 
 <body>
@@ -35,8 +75,8 @@
 
     <nav class="nav__pills" aria-label="Primary">
       <a href="#how">HOW IT WORKS</a>
-      <a href="#about">FAQs</a>
-      <a href="#about">CONTACT</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="blog.html">BLOG</a>
     </nav>
 
     <a class="nav__cta" href="#get">Download</a>
@@ -150,6 +190,8 @@
       <span class="foot__tag">Debate better since 2026</span>
     </div>
     <nav class="foot__links" aria-label="Footer">
+      <a href="faqs.html">FAQs</a>
+      <a href="blog.html">Blog</a>
       <a href="terms.html">Terms of Service</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="mailto:support@joinduella.com">Contact</a>

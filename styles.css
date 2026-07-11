@@ -2,7 +2,7 @@
   --bg: #0e0f13;
   --ink: #f3f4f7;
   --muted: #a2a7b2;
-  --lav: #a99bff;
+  --lav: #4fa9ff;
   --lav-deep: #b9adff;
   --blue: #7cc4ff;
   --blue-deep: #7cc4ff;
@@ -609,6 +609,83 @@ body {
 }
 .legal ul { padding-left: 20px; }
 .legal a { color: var(--lav); }
+
+/* ─── FAQ accordion ─── */
+.faq-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 14px;
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+  transition: border-color .2s ease, background .2s ease;
+}
+.faq-item[open] { border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.05); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform .2s ease;
+}
+.faq-item[open] summary::after { content: "–"; }
+.faq-a {
+  padding: 0 20px 18px;
+}
+.faq-a p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.faq-a a { color: var(--lav); }
+
+/* ─── Blog empty state ─── */
+.blog-empty {
+  margin-top: 36px;
+  padding: 44px 28px;
+  text-align: center;
+  border: 1px dashed rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: rgba(255,255,255,.02);
+}
+.blog-empty .soon-tag { margin: 0 auto; }
+.blog-empty h2 {
+  font-family: "Bricolage Grotesque", "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  margin-top: 16px;
+}
+.blog-empty p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin-top: 12px;
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-empty a { color: var(--lav); }
 
 /* ─── Responsive ───────────────────────────────── */
 @media (max-width: 720px) {
