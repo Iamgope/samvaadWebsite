@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Duella</title>
+  <meta name="description" content="Lost your way? Find a debate worth getting lost in." />
+  <link rel="canonical" href="https://joinduella.com/404" />
+
+  <!-- Favicons / app icons -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#0e0f13">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#0e0f13">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .not-found-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .not-found-container .headline {
+      font-size: clamp(6rem, 20vw, 15rem);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    
+    .not-found-container .subhead {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      margin-bottom: 3rem;
+      max-width: 600px;
+      color: #9ba1b0;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: #0e0f13;
+      padding: 0.8rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ─── NAV ─────────────────────────────────────────── -->
+  <header class="nav">
+    <a class="nav__brand" href="/" aria-label="Duella home">
+      <img src="/assets/logo-assets/website/Web-Icon-192_192x192.png" alt="Duella" />
+      <span>Duella</span>
+    </a>
+
+    <nav class="nav__pills" aria-label="Primary">
+      <a href="/faqs">FAQs</a>
+      <a href="/blog">Blog</a>
+      <a href="mailto:support@joinduella.com">Contact</a>
+    </nav>
+
+    <a class="nav__cta" href="/beta">Join the Beta</a>
+  </header>
+
+  <main class="not-found-container">
+    <h1 class="headline">
+      <span class="line">
+        <span class="word hl hl--lav">4</span>
+        <span class="word hl hl--white">0</span>
+        <span class="word hl hl--lav">4</span>
+      </span>
+    </h1>
+    <p class="subhead">Lost your way? Find a debate worth getting lost in.</p>
+    <a href="/" class="back-btn">Return Home</a>
+  </main>
+
+  <footer class="foot">
+    <div class="foot__brand">
+      <span class="foot__name"><img src="/assets/logo-assets/website/Web-Icon-192_192x192.png" alt="" />Duella</span>
+      <span class="foot__tag">Debate better since 2026</span>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="/faqs">FAQs</a>
+      <a href="/blog">Blog</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/data-deletion">Data Deletion</a>
+      <a href="mailto:support@joinduella.com">Contact</a>
+    </nav>
+  </footer>
+</body>
+
+</html>
