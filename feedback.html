@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join the Beta — Duella</title>
+  <title>Feedback — Duella</title>
   <meta name="description"
-    content="Duella is opening its Android beta soon. Join the waitlist to get early access before we launch on the App Store and Google Play." />
-  <link rel="canonical" href="https://joinduella.com/beta" />
+    content="Give us feedback or suggestions for Duella." />
+  <link rel="canonical" href="https://joinduella.com/feedback" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Duella" />
-  <meta property="og:title" content="Join the Beta — Duella" />
-  <meta property="og:description" content="Android beta opens soon. Join the waitlist to get early access." />
-  <meta property="og:url" content="https://joinduella.com/beta" />
+  <meta property="og:title" content="Feedback — Duella" />
+  <meta property="og:description" content="Give us feedback or suggestions for Duella." />
+  <meta property="og:url" content="https://joinduella.com/feedback" />
   <meta property="og:image" content="https://joinduella.com/og-image.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Join the Beta — Duella" />
-  <meta name="twitter:description" content="Android beta opens soon. Join the waitlist to get early access." />
+  <meta name="twitter:title" content="Feedback — Duella" />
+  <meta name="twitter:description" content="Give us feedback or suggestions for Duella." />
   <meta name="twitter:image" content="https://joinduella.com/og-image.png" />
 
   <!-- Favicons / app icons -->
@@ -46,11 +46,10 @@
   <main class="legal legal--form">
     <a class="legal__back" href="/">← Back to Duella</a>
 
-    <h1>Join the Android beta</h1>
-    <p class="updated">We're opening Duella to Android testers soon. Drop your details below and we'll send
-      the invite the moment it's ready.</p>
+    <h1>Give us your feedback</h1>
+    <p class="updated">We'd love to hear your thoughts on Duella. Drop your feedback or suggestions below.</p>
 
-    <form class="beta-form" id="betaForm">
+    <form class="beta-form" id="feedbackForm">
       <label class="field">
         <span>Name <em>(optional)</em></span>
         <input type="text" name="name" placeholder="Your name" autocomplete="name" />
@@ -62,35 +61,26 @@
           required />
       </label>
 
-      <fieldset class="field field--radio">
-        <span>Do you have an Android phone?</span>
-        <div class="radio-row">
-          <label><input type="radio" name="hasAndroid" value="Yes" required /> Yes</label>
-          <label><input type="radio" name="hasAndroid" value="No" /> No</label>
-        </div>
-        <p class="field__hint">We're only testing on Android right now. No Android? Join anyway, we'll let you
-          know the moment iOS opens up.</p>
-      </fieldset>
-
       <label class="field">
-        <span>Feedback or suggestions <em>(optional)</em></span>
-        <textarea name="message" rows="4" placeholder="Anything you'd like us to know?"></textarea>
+        <span>Feedback or suggestions</span>
+        <textarea name="message" rows="4" placeholder="What's on your mind?" required></textarea>
       </label>
 
-      <button type="submit" class="beta-form__submit">Join the beta</button>
+      <button type="submit" class="beta-form__submit">Submit feedback</button>
     </form>
 
-    <p class="beta-form__status" id="betaStatus" role="status" aria-live="polite"></p>
+    <p class="beta-form__status" id="feedbackStatus" role="status" aria-live="polite"></p>
   </main>
 
   <footer class="foot">
     <div class="foot__brand">
-      <span class="foot__name"><img src="assets/logo-assets/website/Web-Icon-192_192x192.png" alt="" />Duella</span>
+      <span class="foot__name"><img src="assets/duella_logo.svg" alt="" />Duella</span>
       <span class="foot__tag">Debate better since 2026</span>
     </div>
     <nav class="foot__links" aria-label="Footer">
       <a href="/faqs">FAQs</a>
       <a href="/blog">Blog</a>
+      <a href="/releases">Releases</a>
       <a href="/terms">Terms of Service</a>
       <a href="/privacy">Privacy Policy</a>
       <a href="/data-deletion">Data Deletion</a>
@@ -103,31 +93,31 @@
       // Google Apps Script Web App URL — appends submissions to a Google Sheet.
       var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwDGUstbQ8pnRmtC4VxXiuOBWbPnwQne_6nhc8fXANJk1cYDEDmVecCPl76hnECDIIBqg/exec';
 
-      var form = document.getElementById('betaForm');
-      var status = document.getElementById('betaStatus');
+      var form = document.getElementById('feedbackForm');
+      var status = document.getElementById('feedbackStatus');
       var submitBtn = form.querySelector('.beta-form__submit');
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         if (SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
-          status.textContent = 'Signup form is not connected yet — email support@joinduella.com in the meantime.';
+          status.textContent = 'Feedback form is not connected yet — email support@joinduella.com in the meantime.';
           status.className = 'beta-form__status is-error';
           return;
         }
 
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Joining…';
+        submitBtn.textContent = 'Submitting…';
 
         fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
           .then(function () {
             form.hidden = true;
-            status.textContent = "You're on the list! We'll be in touch before launch.";
+            status.textContent = "Thank you for your feedback!";
             status.className = 'beta-form__status is-success';
           })
           .catch(function () {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Join the beta';
+            submitBtn.textContent = 'Submit feedback';
             status.textContent = 'Something went wrong — email us at support@joinduella.com instead.';
             status.className = 'beta-form__status is-error';
           });
