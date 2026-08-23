@@ -1,4 +1,16 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/android",
+      "destination": "https://play.google.com/store/apps/details?id=com.samvaad.app",
+      "permanent": false
+    },
+    {
+      "source": "/getAndroid",
+      "destination": "https://play.google.com/store/apps/details?id=com.samvaad.app",
+      "permanent": false
+    }
+  ]
 }
